@@ -21,3 +21,20 @@ public class Main {
         System.out.printf("Сума до оплати: %.2f грн%n", amountToPay);
     }
 
+    // Метод для обчислення знижки
+    public static double calculateDiscount(double purchaseAmount) {
+        double discount = 0.0;
+
+        // Перевірка суми покупки.
+        // Визначення знижки.
+        if (purchaseAmount <= 5000) {
+            discount = purchaseAmount * 0.05;
+        } else if (purchaseAmount > 5000 && purchaseAmount <= 10000) {
+            discount = purchaseAmount * 0.10;
+        } else if (purchaseAmount > 10000) {
+            discount = purchaseAmount * 0.15;
+        }
+
+        return discount;
+    }
+}
